@@ -1,0 +1,46 @@
+{
+    "name": "sticker",
+    "repository": "https://github.com/fxuls/ez-sticker-bot",
+    "env": {
+        "ADMINS": {
+            "description": "",
+            "required": "True"
+        },
+        "TOKEN": {
+            "description": "",
+            "required": "True"
+        },
+        "SAVE_INTERVAL": {
+            "description": "",
+            "required": "True"
+        },
+        "SPAM_INTERVAL": {
+            "description": "",
+            "required": "True"
+        },
+        "SPAM_MAX": {
+            "description": "",
+            "required": "True"
+        },
+        "BROADCAST_BATCH_SIZE": {
+            "description": "",
+            "required": "True"
+        },
+        "BROADCAST_BATCH_INTERVAL": {
+            "description": "",
+            "required": "True"
+        }
+    },
+    "stack": "container",
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
